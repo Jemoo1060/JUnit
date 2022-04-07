@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.example'
+group = 'com.sparta'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -26,24 +26,7 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    // 테스트 코드를 위한 Lombok 라이브러리
-    testCompileOnly 'org.projectlombok:lombok:1.18.12'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
-    // 스프링 부트 테스트를 위한 라이브러리
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-    // 스프링 시큐리티
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    // Thymeleaf (뷰 템플릿 엔진)
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-
-    // valid 사용
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    // 테스트시 로그인 인증 받은거처럼 하기위해
-    testImplementation 'org.springframework.security:spring-security-test'
 }
-
-
 
 tasks.named('test') {
     useJUnitPlatform()
